@@ -325,6 +325,66 @@ img { max-width: 100%; display: block; }
 
 .project-body { padding: 24px 26px 28px; }
 
+/* Project spec grid */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 32px 0;
+}
+
+@media (max-width: 700px) {
+  .spec-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.spec-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.spec-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.spec-value {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.credit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 8px 0 0;
+}
+
+@media (max-width: 600px) {
+  .credit-grid { grid-template-columns: 1fr; }
+}
+
+.credit-grid h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent-2);
+  margin-bottom: 10px;
+}
+
+.credit-grid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.credit-grid li { margin-bottom: 6px; }
+
 /* Team */
 .team-card {
   background: var(--surface);
@@ -335,8 +395,8 @@ img { max-width: 100%; display: block; }
 }
 
 .avatar {
-  width: 76px;
-  height: 76px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   margin: 0 auto 16px;
   display: flex;
@@ -347,6 +407,13 @@ img { max-width: 100%; display: block; }
   font-size: 1.3rem;
   color: #10171b;
   background: var(--accent-gradient);
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .team-role {
