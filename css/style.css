@@ -406,8 +406,12 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   font-size: 1.3rem;
   color: #10171b;
-  background: var(--accent-gradient);
+  background: var(--surface-2);
   overflow: hidden;
+}
+
+.avatar:has(img) {
+  background: var(--surface);
 }
 
 .avatar img {
